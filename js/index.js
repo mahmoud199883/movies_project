@@ -1,8 +1,31 @@
 let menu = $("#triggle"),
 leftMenu= $(".leftMenu"),
 rightMenu= $(".rightMenu"),
-menu_item=$(".nav-item li")
+menu_item=$(".nav-item li");
 menu.click(function(){
+    let widthleftmenu = leftMenu.outerWidth();
+    // console.log(menu.attr("class"))
+    if(menu.attr("class")=="open")
+    {
+        menu.removeClass("open").addClass("close");
+        leftMenu.animate({"left":`0px`},1000);
+        rightMenu.animate({"left":`${widthleftmenu}`},1000);
+        for(let i=1 ;i<=menu_item.length;i++)
+        {
+            $(`.item${i}`).animate({"opacity":"1","paddingTop":"25px"},i*100+1000)
+        }
+    }
+    else{
+        menu.removeClass("close").addClass("open");
+        leftMenu.animate({"left":`-${widthleftmenu}`},1000);
+        rightMenu.animate({"left":`0px`},1000,function(){
+            menu_item.animate({"opacity":"0","paddingTop":"500px"},1000)
+        });
+        
+    }
+})
+
+menu_item.click(function(){
     let widthleftmenu = leftMenu.outerWidth();
     // console.log(menu.attr("class"))
     if(menu.attr("class")=="open")
@@ -61,14 +84,16 @@ function displayData()
     let temp="";
     for(let i=0;i<allMovies.length;i++)
     {
-        temp+=`<div class="col-md-4 mb-4">
-        <div class="movie-item">
+        temp+=`<div class="col-sm-4 mb-4 ">
+        <div class="movie-item ">
             <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid">
-            <div class="layer">
-                <h3>${allMovies[i].title}</h3>
+            <div class="layer px-2  ">
+                <div >
+                <h3 class="pt-4 text-info">${allMovies[i].title}</h3>
                 <p>${allMovies[i].overview}</p>
-                <p>Rate${allMovies[i].vote_average}</p>
-                <p>${allMovies[i].release_date}</p>
+                <p class="rate">Rate ${allMovies[i].vote_average}</p>
+                <p class="bg-muted"> Release Date : ${allMovies[i].release_date}</p>
+                </div>
             </div>
         </div>
     </div>`

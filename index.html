@@ -2,107 +2,121 @@
 <html lang="en">
 
 <head>
+
+    <!-- meta data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Movies</title>
+    <title>Your Movies</title>
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <!-- fontawesome -->
     <link href="css/all.min.css" rel="stylesheet">
+    <!-- bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- my css -->
     <link href="css/index.css" rel="stylesheet">
 
 </head>
 
+
 <body class="bg-dark">
-<!-- navbar -->
-    
+    <!-- navbar -->
+
     <header>
-        <div class="leftMenu bg-dark p-3 d-flex align-content-between flex-wrap">
-          <div class="nav-item">
-              <ul>
-                <li class="item1">
-                    <a href="#" movieTitle="now_playing">Now playing</a>
-                </li>
-                <li class="item2">
-                    <a href="#" movieTitle="popular">Popular</a>
-                </li>
-                <li class="item3">
-                    <a href="#" movieTitle="top_rated">Top Rated</a>
-                </li>
-                <li class="item4">
-                    <a href="#" movieTitle="upcoming">Upcoming</a>
-                </li>
-                <li class="item5">
-                    <a href="#">News</a>
-                </li>
-                <li class="item6">
-                    <a href="#">Contact Us</a>
-                </li>
-              </ul>
-          </div>
-          <div class="social-item mt-5 ml-4 ">
-             <a href="#" class="mr-3"><i class="fab fa-facebook-f"></i></a>
-             <a href="#" class="mr-3"><i class="fab fa-twitter"></i></a>
-             <a href="#" class="mr-3"><i class="fas fa-globe"></i></a>
-             <p class="text-white mt-4">Copyright Â© 2019 All Rights Reserved.</p>
-          </div>
+
+        <!-- left menu -->
+        <div class="leftMenu bg-dark p-3 pt-5 d-flex align-content-between flex-wrap">
+            <div class="nav-item">
+                <ul>
+                    <li class="item1">
+                        <a href="#" movieTitle="now_playing">Now playing</a>
+                    </li>
+                    <li class="item2">
+                        <a href="#" movieTitle="popular">Popular</a>
+                    </li>
+                    <li class="item3">
+                        <a href="#" movieTitle="top_rated">Top Rated</a>
+                    </li>
+                    <li class="item4">
+                        <a href="#" movieTitle="upcoming">Upcoming</a>
+                    </li>
+
+                    <li class="item5">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- right menu -->
+            <div class="social-item mt-5 ml-4 text-left ">
+                <a href="#" class="mr-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mr-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mr-3"><i class="fas fa-globe"></i></a>
+                <p class="text-white mt-4">Mahmoud Hamdy © 2022 All Rights Reserved.</p>
+            </div>
         </div>
         <div class="rightMenu bg-white d-flex align-content-between justify-content-center flex-wrap p-2">
-           <img src="images/logo.png" class="">
-           <i id="triggle" class="open" aria-hidden="true"></i>
-           <div class="icons">
-               <i class="fa fa-share-alt" aria-hidden="true"></i>
-               <i class="fas fa-globe    "></i>
-           </div>
+            <img src="images/logo.png" class="">
+            <i id="triggle" class="open" aria-hidden="true"></i>
+            <div class="icons">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                <i class="fas fa-globe    "></i>
+            </div>
         </div>
-    </header> 
+    </header>
 
 
     <!-- Movies Section -->
-    <section class="movies p-5">
-        <div class="container">
+    <section class="movies py-5 pr-1 pl-4">
+        <div class="container-fluid pl-5 ">
             <div class="row">
+
+                <!-- Get Any Movies By Word -->
                 <div class="col-md-6">
-                    <input class="form-control bg-dark" id="searchByWord" placeholder="Get Movies By Word....">
+                    <input class="form-control bg-dark" id="searchByWord" placeholder="Get Any Movies By Word....">
                 </div>
+
+                <!-- Search In Current Page -->
                 <div class="col-md-6">
-                    <input class="form-control bg-dark" id="search" placeholder="Search....">
+                    <input class="form-control bg-dark" id="search" placeholder="Search In Current Page">
                 </div>
             </div>
             <div class="row my-5" id="searchResult">
-          
+
             </div>
             <div class="row my-5" id="movies-container">
-             
+
             </div>
-         <div class="row">
+
+            <!-- Page navigation -->
+            <div class="row">
                 <div class="col-md-6 m-auto">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                          <li class="page-item"><a class="page-link page" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">2</a></li>
-                          <li class="page-item "><a class="page-link page" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">4</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">5</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">6</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">7</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">8</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">9</a></li>
-                          <li class="page-item"><a class="page-link page" href="#">10</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link page" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">2</a></li>
+                            <li class="page-item "><a class="page-link page" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">7</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">8</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">9</a></li>
+                            <li class="page-item"><a class="page-link page" href="#">10</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
                         </ul>
-                      </nav>
+                    </nav>
                 </div>
-            </div> 
-         
+            </div>
+
         </div>
     </section>
 
