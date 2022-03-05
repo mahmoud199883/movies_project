@@ -84,7 +84,7 @@ function displayData()
     let temp="";
     for(let i=0;i<allMovies.length;i++)
     {
-        temp+=`<div class="col-sm-4 mb-4 ">
+        temp+=`<div class="col-lg-4 col-md-6 col-sm-12 mb-4 ">
         <div class="movie-item ">
             <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid">
             <div class="layer px-2  ">

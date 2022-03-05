@@ -2,6 +2,7 @@
 body {
     background-color: #000000f2;
     font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
 }
 
 
@@ -16,7 +17,7 @@ body {
     bottom: 0;
     left: -250px;
     width: 250px;
-    height: 100vh;
+    height: 100vh !important;
     z-index: 9999999999999;
 }
 
@@ -44,7 +45,7 @@ body {
     bottom: 0;
     left: 0;
     width: 60px;
-    height: 100vh;
+    height: 100vh !important;
     z-index: 55555555;
     /* transition: all 0.5s ease-in-out; */
 }
