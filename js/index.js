@@ -84,9 +84,9 @@ function displayData()
     let temp="";
     for(let i=0;i<allMovies.length;i++)
     {
-        temp+=`<div class="col-lg-4 col-md-6 col-sm-12 mb-4 ">
+        temp+=`<div class="col-md-4  mb-4 ">
         <div class="movie-item ">
-            <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid">
+            <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid w-100">
             <div class="layer px-2  ">
                 <div >
                 <h3 class="pt-4 text-info">${allMovies[i].title}</h3>
@@ -96,7 +96,11 @@ function displayData()
                 </div>
             </div>
         </div>
-    </div>`
+    </div>
+    
+    
+    
+    `
     }
     movies_container.innerHTML=temp;
 }
