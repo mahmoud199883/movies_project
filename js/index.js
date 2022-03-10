@@ -122,17 +122,31 @@ function searchMovies(word)
     {
         if(allMovies[i].title.toLowerCase().includes(word.toLowerCase())==true)
         {
-            Result+=`<div class="col-md-4">
-            <div class="movie-item">
-                <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid">
-                <div class="layer">
-                    <h3>${allMovies[i].title}</h3>
+
+            Result += `<div class="col-md-4  mb-4 ">
+            <div class="movie-item ">
+                <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid w-100">
+                <div class="layer px-2  ">
+                    <div >
+                    <h3 class="pt-4 text-info">${allMovies[i].title}</h3>
                     <p>${allMovies[i].overview}</p>
-                    <p>Rate${allMovies[i].vote_average}</p>
-                    <p>${allMovies[i].release_date}</p>
+                    <p class="rate">Rate ${allMovies[i].vote_average}</p>
+                    <p class="bg-muted"> Release Date : ${allMovies[i].release_date}</p>
+                    </div>
                 </div>
             </div>
         </div>`;
+        //     Result+=`<div class="col-md-4">
+        //     <div class="movie-item">
+        //         <img src="${imgPath+allMovies[i].poster_path}" class="img-fluid">
+        //         <div class="layer">
+        //             <h3>${allMovies[i].title}</h3>
+        //             <p>${allMovies[i].overview}</p>
+        //             <p>Rate${allMovies[i].vote_average}</p>
+        //             <p>${allMovies[i].release_date}</p>
+        //         </div>
+        //     </div>
+        // </div>`;
         }
     }
     searchResult.innerHTML=Result;
